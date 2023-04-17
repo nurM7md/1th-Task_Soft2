@@ -1,7 +1,6 @@
-FROM node:14-alpine
+FROM node:slim
 WORKDIR /app
-COPY index.js package*.json ./
+COPY . /app
 RUN npm install
-COPY . .
 EXPOSE 3000
 CMD node index.js
